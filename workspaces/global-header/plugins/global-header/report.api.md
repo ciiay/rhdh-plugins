@@ -18,6 +18,7 @@ export enum ComponentType {
   LIST = 'list',
   LOGOUT = 'logout',
   SEARCH = 'search',
+  SPACER = 'spacer',
 }
 
 // @public
@@ -71,7 +72,7 @@ export const GlobalHeaderComponent: React_2.ComponentType<GlobalHeaderComponentP
 export interface GlobalHeaderComponentMountPoint {
   // (undocumented)
   Component: React.ComponentType<
-    HeaderDropdownComponentProps | HeaderIconButtonProps | {}
+    HeaderDropdownComponentProps | HeaderIconButtonProps | SpacerProps | {}
   >;
   // (undocumented)
   config?: GlobalHeaderComponentMountPointConfig & {

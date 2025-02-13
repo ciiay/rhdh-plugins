@@ -30,12 +30,12 @@ export type { HeaderLinkProps } from './components/HeaderLinkComponent/HeaderLin
 export type { MenuItemConfig } from './components/HeaderDropdownComponent/MenuSection';
 export type { SoftwareTemplatesSectionProps } from './components/HeaderDropdownComponent/SoftwareTemplatesSection';
 export type { RegisterAComponentSectionProps } from './components/HeaderDropdownComponent/RegisterAComponentSection';
-export type { SpacerProps } from './components/Spacer/Spacer';
 export type {
   GlobalHeaderComponentMountPoint,
   GlobalHeaderComponentMountPointConfig,
   HeaderDropdownComponentProps,
   HeaderIconButtonProps,
+  SpacerProps,
 } from './types';
 
 export { defaultGlobalHeaderComponentsMountPoints } from './defaultMountPoints/defaultMountPoints';

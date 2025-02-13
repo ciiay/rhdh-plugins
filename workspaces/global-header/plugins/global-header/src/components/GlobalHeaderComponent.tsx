@@ -23,6 +23,7 @@ import { useDropdownManager } from '../hooks/useDropdownManager';
 import { isExternalUrl } from '../utils/stringUtils';
 import { useGlobalHeaderConfig } from '../hooks/useGlobalHeaderConfig';
 import { ErrorBoundary } from '@backstage/core-components';
+import { Spacer } from './Spacer/Spacer';
 
 /**
  * @public
@@ -75,6 +76,18 @@ export const GlobalHeaderComponent = ({
       .filter(component => (component.config?.priority ?? 0) > -1)
       .sort((a, b) => (b.config?.priority ?? 0) - (a.config?.priority ?? 0));
 
+    const types = filteredAndSorted.map(mp => mp.config?.type);
+    if (!types.includes(ComponentType.SEARCH)) {
+      filteredAndSorted.unshift({
+        Component: Spacer as React.ComponentType,
+        config: {
+          type: ComponentType.SPACER,
+          slot: Slot.HEADER_START,
+          priority: 1000,
+        },
+      });
+    }
+
     return {
       globalHeaderStartComponentsMountPoints: filteredAndSorted.filter(
         component => component.config?.slot === Slot.HEADER_START,
@@ -98,6 +111,8 @@ export const GlobalHeaderComponent = ({
 
       const uniqueKey = `header-component-${index}`;
       switch (mp.config?.type) {
+        case ComponentType.SPACER:
+          return <mp.Component key={uniqueKey} />;
         case ComponentType.SEARCH:
           return (
             <ErrorBoundary key={uniqueKey}>

@@ -37,6 +37,10 @@ export enum Slot {
  */
 export enum ComponentType {
   /**
+   * Global Header spacer
+   */
+  SPACER = 'spacer',
+  /**
    * Global Header Component dropdown button
    */
   DROPDOWN_BUTTON = 'dropdown_button',
@@ -60,6 +64,14 @@ export enum ComponentType {
    * Global Header Component logout
    */
   LOGOUT = 'logout',
+}
+
+/**
+ * @public
+ */
+export interface SpacerProps {
+  growFactor: number;
+  minWidth: number | string;
 }
 
 /**
@@ -126,7 +138,7 @@ export interface ProfileDropdownMountPointConfig {
  */
 export interface GlobalHeaderComponentMountPoint {
   Component: React.ComponentType<
-    HeaderDropdownComponentProps | HeaderIconButtonProps | {}
+    HeaderDropdownComponentProps | HeaderIconButtonProps | SpacerProps | {}
   >;
   config?: GlobalHeaderComponentMountPointConfig & {
     props?: Record<string, any>;

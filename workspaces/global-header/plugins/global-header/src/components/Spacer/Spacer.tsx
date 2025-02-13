@@ -15,14 +15,7 @@
  */
 
 import React from 'react';
-
-/**
- * @public
- */
-export interface SpacerProps {
-  growFactor: number;
-  minWidth: number | string;
-}
+import { SpacerProps } from '../../types';
 
 /**
  * @public
