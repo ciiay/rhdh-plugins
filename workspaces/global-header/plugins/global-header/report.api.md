@@ -222,5 +222,19 @@ export type SoftwareTemplatesSectionProps = {
   hideDivider?: boolean;
 };
 
+// @public
+export const Spacer: ({
+  growFactor,
+  minWidth,
+}: SpacerProps) => React_2.JSX.Element;
+
+// @public (undocumented)
+export interface SpacerProps {
+  // (undocumented)
+  growFactor: number;
+  // (undocumented)
+  minWidth: number | string;
+}
+
 // (No @packageDocumentation comment for this package)
 ```
