@@ -713,7 +713,6 @@ export const createComponents = (themeConfig: ThemeConfig): Components => {
             // inset to look right.
             "& > [class*='MuiLinearProgress-root']": {
               backgroundColor: general.mainSectionBackgroundColor,
-              height: '100vh',
               "& > [class*='MuiLinearProgress-']": {
                 height: '0.5rem !important',
               },
