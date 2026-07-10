@@ -338,6 +338,7 @@ export async function createRouter(
             hasToken:
               server.auth === 'dcr' || !!(setting?.token || server.token),
             hasUserToken: !!setting?.token,
+            hasOrgToken: server.auth !== 'dcr' && !!server.token,
             auth: server.auth,
           };
         });
@@ -543,6 +544,7 @@ export async function createRouter(
             hasToken:
               server.auth === 'dcr' || !!(setting.token || server.token),
             hasUserToken: !!setting.token,
+            hasOrgToken: server.auth !== 'dcr' && !!server.token,
             auth: server.auth,
           },
         };
