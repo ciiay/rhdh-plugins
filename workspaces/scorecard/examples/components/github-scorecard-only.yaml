@@ -7,5 +7,5 @@ metadata:
     backstage.io/source-location: url:https://github.com/redhat-developer/rhdh-plugins
 spec:
   type: service
-  owner: group:development/guests
+  owner: user:default/test1
   lifecycle: production
