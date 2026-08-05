@@ -6,5 +6,5 @@ metadata:
     jira/project-key: RSPT
 spec:
   type: service
-  owner: group:development/guests
+  owner: user:default/test1
   lifecycle: production
