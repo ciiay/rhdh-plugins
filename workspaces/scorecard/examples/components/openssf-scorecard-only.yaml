@@ -7,5 +7,5 @@ metadata:
     scorecard.io/disabled-metrics: openssf.maintained
 spec:
   type: service
-  owner: group:development/guests
+  owner: user:default/test1
   lifecycle: experimental
