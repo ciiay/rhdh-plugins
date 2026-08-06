@@ -6,5 +6,5 @@ metadata:
     sonarqube.org/project-key: redhat-developer_rhdh-plugins
 spec:
   type: service
-  owner: group:development/guests
+  owner: user:default/test1
   lifecycle: experimental
